@@ -57,7 +57,7 @@ def show_mulit_plot():
             zero_list = [min(data_line_arr_list) for i in range(max_data_len- len(data_arr_list[i]))]
             data_arr_list[i].extend(zero_list)
 
-        pyplot.plot(slot, data_arr_list[i], ".")
+        pyplot.plot(slot, data_arr_list[i], "o-")
 
     #设置横坐标为year，纵坐标为population，标题为Population year correspondence
     # pyplot.xlabel('slot')
@@ -83,7 +83,7 @@ def show_plot(data, file_name, results_info_folder):
 
     pyplot.figure(figsize=(18, 8), dpi=50)
     pyplot.grid()
-    pyplot.plot(slot, data, '.')
+    pyplot.plot(slot, data, 'o-')
     pyplot.title("Path:"+file_name)
     pyplot.yticks([max(data),min(data)])
     pyplot.show(block=False)
